@@ -41,6 +41,20 @@ def serialize_data(user_service: UserService, booking_service: BookingService):
 
 
 def cli_mode(user_service: UserService, booking_service: BookingService):
+    print("--- Система Бронирования Жилья ---")
+    print("Команды:")
+    print("  add_user          — добавить пользователя")
+    print("  list_users        — список пользователей")
+    print("  get_user <id>     — получить пользователя по ID")
+    print("  delete_user <id>  — удалить пользователя по ID")
+    print("  add_booking       — добавить бронирование")
+    print("  list_bookings     — список бронирований")
+    print("  get_booking <id>  — получить бронирование по ID")
+    print("  update_status <id> <status> — обновить статус (pending/confirmed/cancelled)")
+    print("  delete_booking <id> — удалить бронирование по ID")
+    print("  serialize         — сохранить данные в JSON/XML")
+    print("  help              — помощь")
+    print("  exit              — выход")
 
     addr_template = Address("123 Main St", "New York", "10001")
     property_template = Property("P1", "Cozy Apartment", addr_template, 150.00)
