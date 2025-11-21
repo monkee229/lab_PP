@@ -1,0 +1,11 @@
+valid@example.com
+invalid@@example.com
+user@-baddomain.com
+test.user+tag@gmail.com
+hello@world.org
+bad@domain
+a@b.c
+
+Contact us at support@my-company.net or admin@mail.co.uk
+
+End.
