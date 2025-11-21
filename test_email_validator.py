@@ -22,3 +22,27 @@ def test_find_emails_in_text():
     result = find_emails_in_text(text)
     assert "test@mail.com" in result
     assert "hello@world.org" in result
+
+def test_find_multiple_emails_in_text():
+    text = "Contacts: admin@mail.com, support@company.org, user123@domain.io"
+    result = find_emails_in_text(text)
+    assert "admin@mail.com" in result
+    assert "support@company.org" in result
+    assert "user123@domain.io" in result
+    assert len(result) == 3
+
+
+def test_is_valid_email_edge_cases():
+    # максимально допустимые символы
+    assert is_valid_email("a!#$%&'*+-/=?^_`{|}~z@domain.com")
+    # нельзя начинать домен с '-'
+    assert not is_valid_email("user@-domain.com")
+    # нельзя заканчивать домен на '-'
+    assert not is_valid_email("user@domain-.com")
+
+
+def test_find_emails_ignores_false_matches():
+    text = "Not emails: test@mail, @domain.com, mail@com, abc@@domain.com"
+    result = find_emails_in_text(text)
+
+    assert len(result) == 0
