@@ -1,0 +1,14 @@
+valid@example.com
+invalid@@example.com
+user@-baddomain.com
+test.user+tag@gmail.com
+hello@world.org
+bad@domain
+a@b.c
+
+Contact us at support@my-company.net or admin@mail.co.uk
+
+End.
+
+url:
+https://gist.githubusercontent.com/monkee229/a10c314eebe59f3ae44ca790015abc75/raw/3d703e7ee4eb3742621033b82e165524e0e509e0/emails.txt
